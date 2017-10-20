@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+const PORT = process.env.PORT || 3000
+
 //to provide static files to web browser
 app.use(express.static('public'));
 
@@ -20,7 +22,7 @@ app.get('/api/bmi', function(req, res) {
 	res.send(bmiIndex.toString());
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(PORT, function () {
   var host = server.address().address;
   var port = server.address().port;
 
