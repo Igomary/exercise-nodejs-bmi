@@ -1,8 +1,8 @@
-# 2015-nodejs-bmi
-Example using NodeJS to calculate the BMI
+# Node.js BMI
+A simple example using Node.js to calculate the BMI
 
 ## How to start
-First you need to have NodeJS installed in your machine than run the commands below:
+First you need to have [Node.js](https://nodejs.org/en/) installed in your machine than run the commands below:
 
 ```npm install```
 
