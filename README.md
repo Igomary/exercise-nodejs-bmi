@@ -14,7 +14,7 @@ First you need to have [Node.js](https://nodejs.org/en/) installed in your machi
 The API server will run on localhost:3000
 
 ### User interface
-```cd Service```
+```cd UI```
 
 ```npm install```
 

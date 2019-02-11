@@ -1,7 +1,7 @@
 {
-  "name": "UI",
+  "name": "ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "BMI Calculator service UI",
   "main": "index.js",
   "scripts": {
     "start": "http-server -c-1",
