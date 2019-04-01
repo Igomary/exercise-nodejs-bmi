@@ -107,3 +107,14 @@ button:hover {
 	margin: 0 auto;
 	box-shadow: 3px 3px 4px 0 #CCC;
 }
+
+.content-result .description {
+	width: 140px;
+	background: #F2F4F6;
+	display: block;
+	font-size: 24px;
+	color: #EFAF37;	
+	padding: 12px 15px;
+	margin: 0 auto;
+	box-shadow: 3px 3px 4px 0 #CCC;
+}

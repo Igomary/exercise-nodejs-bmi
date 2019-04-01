@@ -13,9 +13,17 @@ var BMIService = {
 		});
 	},
 	
-	getDescription: function (index) {
-		//TODO to be implemented
-		return "";
-	}
+	getDescription: function (index, callback) {
+		$.ajax({
+			url: 'http://localhost:3000/api/bmi/description', //end-point to backend
+			data: {'index': index},
+			success: function(result) {
+				callback(result);
+			},
+			error: function() {
+				callback(null);
+			}
+		  });
+	  }
 	
 };

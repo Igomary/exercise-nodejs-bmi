@@ -19,12 +19,17 @@ var BMIController = {
 			height = parseFloat(form.height.value),
 			result = 0;
 		
-		var callback = function(result) {
-			BMIController.showResult(result);			
+		var descriptionCallback = function(result) {
+			BMIController.showDescription(result);
+		};
+	
+		var bmiCallback = function(result) {
+			BMIService.getDescription(result, descriptionCallback);
+			BMIController.showResult(result);
 		};
 		
 		BMIController.showLoading(true);
-		BMIService.getIndex(weight, height, callback);
+		BMIService.getIndex(weight, height, bmiCallback);
 	},
 	
 	showResult: function(result) {
@@ -33,6 +38,11 @@ var BMIController = {
 		BMIController.showLoading(false);
 	},
 	
+	showDescription: function(result) {
+		var spanResult = document.querySelector('.description');
+		spanResult.innerHTML = result;
+	},
+
 	showLoading: function(isLoading) {
 		document.querySelector('.label').innerHTML = isLoading ? 'loading...' : 'BMI Result'
 	}
